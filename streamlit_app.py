@@ -10,3 +10,6 @@ st.title("Projet de classification binaire Titanic")
 st.sidebar.title("Sommaire")
 pages=["Exploration", "DataVizualization", "Modélisation"]
 page=st.sidebar.radio("Aller vers", pages)
+
+if page == pages[0] : 
+  st.write("### Introduction")
