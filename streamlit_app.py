@@ -102,4 +102,13 @@ if page == pages[2] :
       elif choice == 'Confusion matrix':
           return confusion_matrix(y_test, clf.predict(X_test))
 
+  choix = ['Random Forest', 'SVC', 'Logistic Regression']
+  option = st.selectbox('Choix du modèle', choix)
+  st.write('Le modèle choisi est :', option)
   
+  clf = prediction(option)
+  display = st.radio('Que souhaitez-vous montrer ?', ('Accuracy', 'Confusion matrix'))
+  if display == 'Accuracy':
+      st.write(scores(clf, display))
+  elif display == 'Confusion matrix':
+      st.dataframe(scores(clf, display))
