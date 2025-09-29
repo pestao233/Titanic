@@ -24,3 +24,7 @@ if page == pages[0] :
 
 if page == pages[1] : 
   st.write("### DataVizualization")
+
+  fig = plt.figure()
+  sns.countplot(x = "Survived", data = df)
+  st.pyplot(fig)
