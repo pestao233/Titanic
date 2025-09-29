@@ -16,8 +16,11 @@ if page == pages[0] :
 
 st.dataframe(df.head(10))
 
-st.write(df.shape)
+st.write("shape:", df.shape)
 st.dataframe(df.describe())
 
 if st.checkbox("Afficher les NA") :
   st.dataframe(df.isna().sum())
+
+if page == pages[1] : 
+  st.write("### DataVizualization")
