@@ -28,3 +28,17 @@ if page == pages[1] :
   fig = plt.figure()
   sns.countplot(x = "Survived", data = df)
   st.pyplot(fig)
+
+  fig = plt.figure()
+  sns.countplot(x = 'Sex', data = df)
+  plt.title("Répartition du genre des passagers")
+  st.pyplot(fig)
+
+  fig = plt.figure()
+  sns.countplot(x = 'Pclass', data = df)
+  plt.title("Répartition des classes des passagers")
+  st.pyplot(fig)
+
+  fig = sns.displot(x = 'Age', data = df)
+  plt.title("Distribution de l'âge des passagers")
+  st.pyplot(fig)
