@@ -15,3 +15,9 @@ if page == pages[0] :
   st.write("### Introduction")
 
 st.dataframe(df.head(10))
+
+st.write(df.shape)
+st.dataframe(df.describe())
+
+if st.checkbox("Afficher les NA") :
+  st.dataframe(df.isna().sum())
