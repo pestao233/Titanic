@@ -50,5 +50,9 @@ if page == pages[1] :
   fig = sns.catplot(x='Pclass', y='Survived', data=df, kind='point')
   st.pyplot(fig)
 
+  fig, ax = plt.subplots()
+  sns.heatmap(df.select_dtypes(include=[np.number]).corr(), ax=ax)
+  st.write(fig)
+
   fig = sns.lmplot(x='Age', y='Survived', hue="Pclass", data=df)
   st.pyplot(fig)
