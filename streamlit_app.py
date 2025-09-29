@@ -13,3 +13,5 @@ page=st.sidebar.radio("Aller vers", pages)
 
 if page == pages[0] : 
   st.write("### Introduction")
+
+st.dataframe(df.head(10))
